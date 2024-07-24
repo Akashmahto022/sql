@@ -41,7 +41,7 @@ INSERT INTO employee(FirstName, LastName, Age, Salary, Location) VALUE ("Shahihd
 -- select the whole table and read the table
 SELECT * FROM employee;
 
--- slect persone whose salary is greater than 100000;
+-- slect persone whose salary is greater than 100000;		
 SELECT * FROM employee WHERE Salary > 100000;
 
 -- slect the persone firstName and the last name of the persone in the table whose salary biger than 100000
@@ -52,7 +52,7 @@ SELECT * FROM employee WHERE age > 25;
 
 -- update the last name of rahul mahto with kumar
 
-UPDATE employee SET LastName = "kumar" where EmployeeId = 2;
+UPDATE employee SET LastName = "kumar" where EmployeeId = 2;	
 UPDATE employee SET LastName = "kumar" where EmployeeId = 1;
 
 -- delete the record of employee id = 4
