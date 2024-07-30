@@ -39,6 +39,39 @@ SELECT * FROM learner;
 -- DATA Analysis [employee, coiurse, learner]
 -- 1. Give me the record of the employee getting higest salary
 
-SELECT * FROM employee WHERE Salary > 100000
+SELECT * FROM employee WHERE Salary > 100000;
 
+SELECT * FROM employee
+ORDER BY Salary DESC LIMIT 1;
 
+-- GIVE ME THE RECORD OF THE EMPLOYEE GETTING HIGEST SALARY AND AGE IS BIGGER THEN 22
+
+SELECT * FROM employee 
+WHERE Age > 18
+ORDER BY Salary DESC 
+LIMIT 4;
+
+-- DISPLAY NO OF ENROLLMENT IN THE WEBSITE
+
+SELECT COUNT(*) as num_of_enrollment
+FROM learner;
+
+-- DISPLAY NO OF ENROLLMENT of the courseId = 3
+SELECT COUNT(*) as num_of_enrolment_in_sql
+FROM learner 
+WHERE selectedCourse = 3;
+
+-- COUNT NO OF LEARNER OF LEARNER ENROLLED IN THE MONTH OF JAN
+SELECT COUNT(*) AS num_of_learner_enrolled_in_jan
+FROM learner
+WHERE enrollMentDate LIKE '%-01-21';
+
+-- UPDATE THE RAHUL DATA WITH YEARS OF EXPERIENCE AS 5 AND COMPANY AS "AMAZON" 
+UPDATE learner
+SET yearsOfExperience = 2, learerCompany = "AMAZON"
+WHERE userID = 1;
+
+-- COUNT THE NO OF COMPANY LEARNER BELONG TO WHERE LEARNERS DOING THERE JOB
+
+SELECT COUNT(learerCompany)
+FROM learner
