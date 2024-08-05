@@ -1,8 +1,11 @@
 SHOW DATABASES;
 USE portfolio;
 
+
+-- course is table 
 SELECT * FROM course;
 
+-- creating the learner table
 CREATE TABLE learner(
 	userID 					INT AUTO_INCREMENT,
     firstName 				VARCHAR(30) NOT NULL,
@@ -19,6 +22,8 @@ CREATE TABLE learner(
     PRIMARY KEY(userID),
     UNIQUE KEY(emailId),
     FOREIGN KEY(selectedCourse) REFERENCES course(courseID)
+    -- foreign key is used for the references for other table
+    
 );
 
 DESC learner;
@@ -36,7 +41,7 @@ SELECT * FROM learner;
 
 
 
--- DATA Analysis [employee, coiurse, learner]
+-- DATA Analysis [employee, courses, learner]
 -- 1. Give me the record of the employee getting higest salary
 
 SELECT * FROM employee WHERE Salary > 100000;
@@ -44,7 +49,7 @@ SELECT * FROM employee WHERE Salary > 100000;
 SELECT * FROM employee
 ORDER BY Salary DESC LIMIT 1;
 
--- GIVE ME THE RECORD OF THE EMPLOYEE GETTING HIGEST SALARY AND AGE IS BIGGER THEN 22
+-- GIVE ME THE RECORD OF THE EMPLOYEE GETTING HIGEST SALARY AND AGE IS BIGGER THEN 18
 
 SELECT * FROM employee 
 WHERE Age > 18
@@ -64,7 +69,9 @@ WHERE selectedCourse = 3;
 -- COUNT NO OF LEARNER OF LEARNER ENROLLED IN THE MONTH OF JAN
 SELECT COUNT(*) AS num_of_learner_enrolled_in_jan
 FROM learner
-WHERE enrollMentDate LIKE '%-01-21';
+WHERE enrollMentDate LIKE '%-01-21%';
+
+-- %-01-21% = first years - month - date
 
 -- UPDATE THE RAHUL DATA WITH YEARS OF EXPERIENCE AS 5 AND COMPANY AS "AMAZON" 
 UPDATE learner
@@ -75,3 +82,5 @@ WHERE userID = 1;
 
 SELECT COUNT(learerCompany)
 FROM learner
+
+
