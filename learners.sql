@@ -1,5 +1,6 @@
 SHOW DATABASES;
 USE portfolio;
+SHOW TABLES;
 
 
 -- course is table 
