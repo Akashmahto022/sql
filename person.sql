@@ -37,4 +37,6 @@ SELECT * FROM person_profile WHERE proffession = "Software Developer";
 
 UPDATE person_profile SET proffession = "Full Stack Develoer" WHERE username = "Akash";
 
+UPDATE person_profile SET username = "Akash Mahto" WHERE proffession = "Software Developer";
+
 DELETE FROM person_profile WHERE username = "Akash"
