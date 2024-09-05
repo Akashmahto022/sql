@@ -84,4 +84,3 @@ WHERE userID = 1;
 SELECT COUNT(learerCompany)
 FROM learner
 
-
