@@ -13,6 +13,7 @@ CREATE TABLE profile(
     proffession 	Varchar(20) NOT NULL
 );
 
+
 DROP TABLE profile;
 DESC profile;
 SELECT * FROM profile;

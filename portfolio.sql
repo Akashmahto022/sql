@@ -6,11 +6,11 @@ CREATE DATABASE NAME;
 SHOW DATABASES;
 
 -- create if not exists 
-CREATE DATABASE IF NOT EXISTS NAME;
+CREATE DATABASE IF NOT EXISTS testing;
 
 -- to use portfolio datase
 USE portfolio;
-
+USE employee;
 -- check databases you working on
 SELECT database();
 
@@ -44,16 +44,22 @@ SELECT * FROM employee;
 -- slect persone whose salary is greater than 100000;		
 SELECT * FROM employee WHERE Salary > 100000;
 
+SELECT * FROM employee WHERE FirstName = "Akash";
+
 -- slect the persone firstName and the last name of the persone in the table whose salary biger than 100000
 SELECT FirstName,Age FROM employee WHERE Salary > 100000;
 
 -- select the persone whose age id greater then 25
 SELECT * FROM employee WHERE age > 25;
 
+SELECT * FROM employee WHERE EmployeeId = 3;
+
 -- update the last name of rahul mahto with kumar
 
 UPDATE employee SET LastName = "kumar" where EmployeeId = 2;	
 UPDATE employee SET LastName = "kumar" where EmployeeId = 1;
+
+UPDATE employee SET LastName = "Mahto" WHERE EmployeeId = 3;
 
 -- delete the record of employee id = 4
 DELETE FROM employee WHERE EmployeeId = 4;
